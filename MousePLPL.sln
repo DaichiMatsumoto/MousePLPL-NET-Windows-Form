@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MousePLPL", "MousePLPL.csproj", "{F9D7ADCB-07EF-40AF-9295-2BAD12DF0B02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MousePLPL", "MousePLPL.csproj", "{F9D7ADCB-07EF-40AF-9295-2BAD12DF0B02}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ソリューション項目", "ソリューション項目", "{D637D502-3809-4976-888C-B4981688ABD4}"
+	ProjectSection(SolutionItems) = preProject
+		MouseMover.cs = MouseMover.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

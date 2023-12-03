@@ -2,17 +2,30 @@ namespace MousePLPL
 {
     public partial class Form1 : Form
     {
+        private MouseMover mouseMover = new();
+        private System.Windows.Forms.Timer mouseMoveTimer = new System.Windows.Forms.Timer();
+
+        private void StartMousePLPL()
+        {
+            mouseMoveTimer.Interval = 3000; // 3秒ごとに実行
+            mouseMoveTimer.Tick += (sender, e) => {
+                mouseMover.MoveMouse(20, 0); // 例: 右に10ピクセル
+                mouseMover.MoveMouse(-20, 0); // 左に10ピクセル
+            };
+            mouseMoveTimer.Start();
+        }
+
+        private void StopMousePLPL()
+        {
+            mouseMoveTimer.Stop();
+        }
+
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
+        private void NotifyIcon1_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -29,11 +42,28 @@ namespace MousePLPL
             // フォームがロードされたときにタスクトレイに隠す
             this.Hide();
             notifyIcon1.Visible = true;
+
+            StartMousePLPL();
         }
 
-        private void contextMenuStrip1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            // フォームがユーザーによって閉じられた場合は、アプリケーションを終了させずに隠す
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                e.Cancel = true;
+                this.Hide();
+            }
+        }
 
+        private void 開始ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StartMousePLPL();
+        }
+
+        private void 停止ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StopMousePLPL();
         }
 
         private void 終了ToolStripMenuItem_Click(object sender, EventArgs e)

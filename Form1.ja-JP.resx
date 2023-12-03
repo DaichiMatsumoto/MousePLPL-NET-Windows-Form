@@ -117,53 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Form1</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="notifyIcon1.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="再起動ToolStripMenuItem.Text" xml:space="preserve">
-    <value>再起動</value>
-  </data>
-  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
-    <value>contextMenuStrip1</value>
-  </data>
-  <data name="&gt;&gt;再起動ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="停止ToolStripMenuItem.Text" xml:space="preserve">
-    <value>停止</value>
-  </data>
-  <data name="コントロールToolStripMenuItem.Text" xml:space="preserve">
-    <value>コントロール</value>
-  </data>
-  <data name="&gt;&gt;開始ToolStripMenuItem.Name" xml:space="preserve">
-    <value>開始ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;設定ToolStripMenuItem.Name" xml:space="preserve">
-    <value>設定ToolStripMenuItem</value>
-  </data>
-  <data name="notifyIcon1.Text" xml:space="preserve">
-    <value>notifyIcon1</value>
-  </data>
-  <data name="設定ToolStripMenuItem.Text" xml:space="preserve">
-    <value>設定</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>302, 333</value>
-  </data>
-  <data name="設定ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 22</value>
-  </data>
-  <data name="開始ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 22</value>
-  </data>
-  <data name="開始ToolStripMenuItem.Text" xml:space="preserve">
-    <value>開始</value>
-  </data>
   <data name="notifyIcon1.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAOgAAAEAIAAovQMAFgAAACgAAAAAAQAA0AEAAAEAIAAAAAAAAKADAL8yAAC/MgAAAAAAAAAA
@@ -4253,74 +4207,8 @@
         AAAAAAAAAAAAAAB///8=
 </value>
   </data>
-  <data name="再起動ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 22</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
-  </data>
-  <data name="終了ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 22</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Form1</value>
-  </data>
-  <data name="&gt;&gt;停止ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;終了ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;コントロールToolStripMenuItem.Name" xml:space="preserve">
-    <value>コントロールToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;停止ToolStripMenuItem.Name" xml:space="preserve">
-    <value>停止ToolStripMenuItem</value>
-  </data>
-  <data name="停止ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 22</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;開始ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;notifyIcon1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NotifyIcon, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;コントロールToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="終了ToolStripMenuItem.Text" xml:space="preserve">
-    <value>終了</value>
-  </data>
-  <data name="&gt;&gt;再起動ToolStripMenuItem.Name" xml:space="preserve">
-    <value>再起動ToolStripMenuItem</value>
-  </data>
-  <data name="コントロールToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 22</value>
-  </data>
-  <data name="&gt;&gt;notifyIcon1.Name" xml:space="preserve">
-    <value>notifyIcon1</value>
-  </data>
-  <data name="&gt;&gt;MousePLPL.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;終了ToolStripMenuItem.Name" xml:space="preserve">
-    <value>終了ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;MousePLPL.Name" xml:space="preserve">
+  <data name="notifyIcon1.Text" xml:space="preserve">
     <value>MousePLPL</value>
-  </data>
-  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;設定ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 48</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -8411,19 +8299,7 @@
         AAAAAAAAAAAAAAB///8=
 </value>
   </data>
-  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>131, 17</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="notifyIcon1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="MousePLPL.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>131, 17</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>ja-JP</value>
-  </metadata>
+  <data name="$this.Text" xml:space="preserve">
+    <value>MousePLPL</value>
+  </data>
 </root>

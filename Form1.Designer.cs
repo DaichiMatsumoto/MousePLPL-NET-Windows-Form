@@ -43,66 +43,57 @@
             // 
             // notifyIcon1
             // 
+            resources.ApplyResources(notifyIcon1, "notifyIcon1");
             notifyIcon1.ContextMenuStrip = contextMenuStrip1;
-            notifyIcon1.Icon = (Icon)resources.GetObject("notifyIcon1.Icon");
-            notifyIcon1.Text = "notifyIcon1";
-            notifyIcon1.Visible = true;
-            notifyIcon1.MouseClick += notifyIcon1_MouseClick;
-            notifyIcon1.MouseDoubleClick += notifyIcon1_MouseDoubleClick;
+            notifyIcon1.MouseClick += NotifyIcon1_MouseClick;
             // 
             // contextMenuStrip1
             // 
+            resources.ApplyResources(contextMenuStrip1, "contextMenuStrip1");
             contextMenuStrip1.Items.AddRange(new ToolStripItem[] { コントロールToolStripMenuItem, 設定ToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(181, 70);
-            contextMenuStrip1.Opening += contextMenuStrip1_Opening;
             // 
             // コントロールToolStripMenuItem
             // 
+            resources.ApplyResources(コントロールToolStripMenuItem, "コントロールToolStripMenuItem");
             コントロールToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { 再起動ToolStripMenuItem, 停止ToolStripMenuItem, 開始ToolStripMenuItem, 終了ToolStripMenuItem });
             コントロールToolStripMenuItem.Name = "コントロールToolStripMenuItem";
-            コントロールToolStripMenuItem.Size = new Size(180, 22);
-            コントロールToolStripMenuItem.Text = "コントロール";
             // 
             // 再起動ToolStripMenuItem
             // 
+            resources.ApplyResources(再起動ToolStripMenuItem, "再起動ToolStripMenuItem");
             再起動ToolStripMenuItem.Name = "再起動ToolStripMenuItem";
-            再起動ToolStripMenuItem.Size = new Size(110, 22);
-            再起動ToolStripMenuItem.Text = "再起動";
             // 
             // 停止ToolStripMenuItem
             // 
+            resources.ApplyResources(停止ToolStripMenuItem, "停止ToolStripMenuItem");
             停止ToolStripMenuItem.Name = "停止ToolStripMenuItem";
-            停止ToolStripMenuItem.Size = new Size(110, 22);
-            停止ToolStripMenuItem.Text = "停止";
+            停止ToolStripMenuItem.Click += 停止ToolStripMenuItem_Click;
             // 
             // 開始ToolStripMenuItem
             // 
+            resources.ApplyResources(開始ToolStripMenuItem, "開始ToolStripMenuItem");
             開始ToolStripMenuItem.Name = "開始ToolStripMenuItem";
-            開始ToolStripMenuItem.Size = new Size(110, 22);
-            開始ToolStripMenuItem.Text = "開始";
+            開始ToolStripMenuItem.Click += 開始ToolStripMenuItem_Click;
             // 
             // 終了ToolStripMenuItem
             // 
+            resources.ApplyResources(終了ToolStripMenuItem, "終了ToolStripMenuItem");
             終了ToolStripMenuItem.Name = "終了ToolStripMenuItem";
-            終了ToolStripMenuItem.Size = new Size(110, 22);
-            終了ToolStripMenuItem.Text = "終了";
             終了ToolStripMenuItem.Click += 終了ToolStripMenuItem_Click;
             // 
             // 設定ToolStripMenuItem
             // 
+            resources.ApplyResources(設定ToolStripMenuItem, "設定ToolStripMenuItem");
             設定ToolStripMenuItem.Name = "設定ToolStripMenuItem";
-            設定ToolStripMenuItem.Size = new Size(180, 22);
-            設定ToolStripMenuItem.Text = "設定";
             設定ToolStripMenuItem.Click += 設定ToolStripMenuItem_Click;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(302, 333);
             Name = "Form1";
-            Text = "Form1";
+            FormClosing += Form1_FormClosing;
             contextMenuStrip1.ResumeLayout(false);
             ResumeLayout(false);
         }
