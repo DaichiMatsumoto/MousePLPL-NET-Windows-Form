@@ -23,6 +23,7 @@ namespace MousePLPL
         public Form1()
         {
             InitializeComponent();
+            StartMousePLPL();
         }
 
         private void NotifyIcon1_MouseClick(object sender, MouseEventArgs e)
@@ -42,8 +43,6 @@ namespace MousePLPL
             // フォームがロードされたときにタスクトレイに隠す
             this.Hide();
             notifyIcon1.Visible = true;
-
-            StartMousePLPL();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
