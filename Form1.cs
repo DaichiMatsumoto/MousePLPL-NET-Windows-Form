@@ -7,10 +7,20 @@ namespace MousePLPL
 
         private void StartMousePLPL()
         {
+            bool moveRight = true;
+
             mouseMoveTimer.Interval = 3000; // 3秒ごとに実行
-            mouseMoveTimer.Tick += (sender, e) => {
-                mouseMover.MoveMouse(20, 0); // 例: 右に10ピクセル
-                mouseMover.MoveMouse(-20, 0); // 左に10ピクセル
+            mouseMoveTimer.Tick += (sender, e) =>
+            {
+                if (moveRight)
+                {
+                    mouseMover.MoveMouse(20, 0); // 右に20ピクセル
+                }
+                else
+                {
+                    mouseMover.MoveMouse(-20, 0); // 左に20ピクセル
+                }
+                moveRight = !moveRight; // 方向を反転
             };
             mouseMoveTimer.Start();
         }
@@ -77,5 +87,6 @@ namespace MousePLPL
             // ウィンドウ状態を通常に設定する
             this.WindowState = FormWindowState.Normal;
         }
+
     }
 }
