@@ -108,6 +108,7 @@
             btn_ok.Name = "btn_ok";
             toolTip1.SetToolTip(btn_ok, resources.GetString("btn_ok.ToolTip"));
             btn_ok.UseVisualStyleBackColor = true;
+            btn_ok.Click += btn_ok_Click;
             // 
             // btn_apply
             // 
@@ -115,6 +116,7 @@
             btn_apply.Name = "btn_apply";
             toolTip1.SetToolTip(btn_apply, resources.GetString("btn_apply.ToolTip"));
             btn_apply.UseVisualStyleBackColor = true;
+            btn_apply.Click += btn_apply_Click;
             // 
             // label4
             // 

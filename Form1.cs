@@ -7,23 +7,22 @@ namespace MousePLPL
 
         private void StartMousePLPL()
         {
+            // Properties.Settings.Default から設定を読み込む
+            int interval = Properties.Settings.Default.Interval;
+            int distance = Properties.Settings.Default.Distance;
             bool moveRight = true;
 
-            mouseMoveTimer.Interval = 3000; // 3秒ごとに実行
+            // タイマーのインターバルを設定値に基づいて設定
+            mouseMoveTimer.Interval = interval*1000; // 例: 3000（3秒）
             mouseMoveTimer.Tick += (sender, e) =>
             {
-                if (moveRight)
-                {
-                    mouseMover.MoveMouse(20, 0); // 右に20ピクセル
-                }
-                else
-                {
-                    mouseMover.MoveMouse(-20, 0); // 左に20ピクセル
-                }
+                int moveDistance = moveRight ? distance : -distance;
+                mouseMover.MoveMouse(moveDistance, 0); // 設定値に基づいて移動
                 moveRight = !moveRight; // 方向を反転
             };
             mouseMoveTimer.Start();
         }
+
 
         private void StopMousePLPL()
         {
@@ -33,7 +32,22 @@ namespace MousePLPL
         public Form1()
         {
             InitializeComponent();
+            LoadSettings();
             StartMousePLPL();
+        }
+        private void LoadSettings()
+        {
+            // Properties.Settings.Default から設定を読み込む
+            nph_interval.Value = Properties.Settings.Default.Interval;
+            nph_distance.Value = Properties.Settings.Default.Distance;
+        }
+
+        private void SaveSettings()
+        {
+            // 新しい設定値を Properties.Settings.Default に保存する
+            Properties.Settings.Default.Interval = (int)nph_interval.Value;
+            Properties.Settings.Default.Distance = (int)nph_distance.Value;
+            Properties.Settings.Default.Save();
         }
 
         private void NotifyIcon1_MouseClick(object sender, MouseEventArgs e)
@@ -88,5 +102,18 @@ namespace MousePLPL
             this.WindowState = FormWindowState.Normal;
         }
 
+        private void btn_ok_Click(object sender, EventArgs e)
+        {
+            SaveSettings();
+            StartMousePLPL();
+            this.Close(); // OKを押したらフォームを閉じる
+        }
+
+        private void btn_apply_Click(object sender, EventArgs e)
+        {
+            SaveSettings();
+            // Applyを押したらフォームは閉じずに設定を適用する
+            StartMousePLPL();
+        }
     }
 }
