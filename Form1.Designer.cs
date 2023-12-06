@@ -77,6 +77,7 @@
             // 
             resources.ApplyResources(再起動ToolStripMenuItem, "再起動ToolStripMenuItem");
             再起動ToolStripMenuItem.Name = "再起動ToolStripMenuItem";
+            再起動ToolStripMenuItem.Click += 再起動ToolStripMenuItem_Click;
             // 
             // 停止ToolStripMenuItem
             // 

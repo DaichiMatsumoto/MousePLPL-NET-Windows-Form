@@ -13,7 +13,7 @@ namespace MousePLPL
             bool moveRight = true;
 
             // タイマーのインターバルを設定値に基づいて設定
-            mouseMoveTimer.Interval = interval*1000; // 例: 3000（3秒）
+            mouseMoveTimer.Interval = interval * 1000; // 例: 3000（3秒）
             mouseMoveTimer.Tick += (sender, e) =>
             {
                 int moveDistance = moveRight ? distance : -distance;
@@ -113,6 +113,12 @@ namespace MousePLPL
         {
             SaveSettings();
             // Applyを押したらフォームは閉じずに設定を適用する
+            StartMousePLPL();
+        }
+
+        private void 再起動ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StopMousePLPL();
             StartMousePLPL();
         }
     }
