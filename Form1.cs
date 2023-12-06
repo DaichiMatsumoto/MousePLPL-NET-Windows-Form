@@ -81,6 +81,7 @@ namespace MousePLPL
 
         private void 開始ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            StopMousePLPL();
             StartMousePLPL();
         }
 
@@ -104,6 +105,7 @@ namespace MousePLPL
 
         private void btn_ok_Click(object sender, EventArgs e)
         {
+            StopMousePLPL();
             SaveSettings();
             StartMousePLPL();
             this.Close(); // OKを押したらフォームを閉じる
@@ -111,14 +113,9 @@ namespace MousePLPL
 
         private void btn_apply_Click(object sender, EventArgs e)
         {
+            StopMousePLPL();
             SaveSettings();
             // Applyを押したらフォームは閉じずに設定を適用する
-            StartMousePLPL();
-        }
-
-        private void 再起動ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            StopMousePLPL();
             StartMousePLPL();
         }
     }

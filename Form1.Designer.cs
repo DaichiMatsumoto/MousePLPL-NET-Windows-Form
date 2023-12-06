@@ -33,7 +33,6 @@
             notifyIcon1 = new NotifyIcon(components);
             contextMenuStrip1 = new ContextMenuStrip(components);
             コントロールToolStripMenuItem = new ToolStripMenuItem();
-            再起動ToolStripMenuItem = new ToolStripMenuItem();
             停止ToolStripMenuItem = new ToolStripMenuItem();
             開始ToolStripMenuItem = new ToolStripMenuItem();
             終了ToolStripMenuItem = new ToolStripMenuItem();
@@ -70,14 +69,8 @@
             // コントロールToolStripMenuItem
             // 
             resources.ApplyResources(コントロールToolStripMenuItem, "コントロールToolStripMenuItem");
-            コントロールToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { 再起動ToolStripMenuItem, 停止ToolStripMenuItem, 開始ToolStripMenuItem, 終了ToolStripMenuItem });
+            コントロールToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { 停止ToolStripMenuItem, 開始ToolStripMenuItem, 終了ToolStripMenuItem });
             コントロールToolStripMenuItem.Name = "コントロールToolStripMenuItem";
-            // 
-            // 再起動ToolStripMenuItem
-            // 
-            resources.ApplyResources(再起動ToolStripMenuItem, "再起動ToolStripMenuItem");
-            再起動ToolStripMenuItem.Name = "再起動ToolStripMenuItem";
-            再起動ToolStripMenuItem.Click += 再起動ToolStripMenuItem_Click;
             // 
             // 停止ToolStripMenuItem
             // 
@@ -202,7 +195,6 @@
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem 設定ToolStripMenuItem;
         private ToolStripMenuItem コントロールToolStripMenuItem;
-        private ToolStripMenuItem 再起動ToolStripMenuItem;
         private ToolStripMenuItem 停止ToolStripMenuItem;
         private ToolStripMenuItem 開始ToolStripMenuItem;
         private ToolStripMenuItem 終了ToolStripMenuItem;
