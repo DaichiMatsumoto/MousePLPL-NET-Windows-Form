@@ -4,29 +4,29 @@ namespace MousePLPL
     {
         private MouseMover mouseMover = new();
         private System.Windows.Forms.Timer mouseMoveTimer = new System.Windows.Forms.Timer();
+        private bool moveRight = true; // クラスのメンバ変数として定義
 
         private void StartMousePLPL()
         {
-            // Properties.Settings.Default から設定を読み込む
-            int interval = Properties.Settings.Default.Interval;
-            int distance = Properties.Settings.Default.Distance;
-            bool moveRight = true;
-
-            // タイマーのインターバルを設定値に基づいて設定
-            mouseMoveTimer.Interval = interval * 1000; // 例: 3000（3秒）
-            mouseMoveTimer.Tick += (sender, e) =>
-            {
-                int moveDistance = moveRight ? distance : -distance;
-                mouseMover.MoveMouse(moveDistance, 0); // 設定値に基づいて移動
-                moveRight = !moveRight; // 方向を反転
-            };
+            // 既存のイベントハンドラを削除
+            mouseMoveTimer.Tick -= MouseMoveTimer_Tick;
+            // タイマーの設定
+            mouseMoveTimer.Interval = Properties.Settings.Default.Interval * 1000;
+            mouseMoveTimer.Tick += MouseMoveTimer_Tick;
             mouseMoveTimer.Start();
         }
-
-
         private void StopMousePLPL()
         {
             mouseMoveTimer.Stop();
+            // イベントハンドラを削除
+            mouseMoveTimer.Tick -= MouseMoveTimer_Tick;
+        }
+        private void MouseMoveTimer_Tick(object sender, EventArgs e)
+        {
+            int distance = Properties.Settings.Default.Distance;
+            int moveDistance = moveRight ? distance : -distance;
+            mouseMover.MoveMouse(moveDistance, 0);
+            moveRight = !moveRight;
         }
 
         public Form1()

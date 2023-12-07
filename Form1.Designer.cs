@@ -134,7 +134,7 @@
             // 
             resources.ApplyResources(nph_interval, "nph_interval");
             nph_interval.Maximum = new decimal(new int[] { 3600, 0, 0, 0 });
-            nph_interval.Minimum = new decimal(new int[] { 3, 0, 0, 0 });
+            nph_interval.Minimum = new decimal(new int[] { 2, 0, 0, 0 });
             nph_interval.Name = "nph_interval";
             toolTip1.SetToolTip(nph_interval, resources.GetString("nph_interval.ToolTip"));
             nph_interval.Value = new decimal(new int[] { 3, 0, 0, 0 });
